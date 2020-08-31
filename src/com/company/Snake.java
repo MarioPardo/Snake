@@ -230,6 +230,8 @@ public class Snake
         {
             cube.explode();
         }
+
+
     }
 
 
@@ -427,11 +429,11 @@ public class Snake
         public Color rainbow()  //this makes the snake's cubes have a rainbow pattern
         {
 
-            System.out.println("R : " + R + " G : " + G + " B : " + B  );
+
 
             if(R == 255 && G < 255  && B < 255 && step == 1)
             {
-                System.out.println("s1");
+
                 G += 5;
                 return  new Color(R, G, B);
             }
@@ -439,7 +441,7 @@ public class Snake
             if(R <= 255 && R != 0 && G == 255 && B < 255)
             {
                 step = 2;
-                System.out.println("s2");
+
                 if(R > 0) {
                     R -= 5;
                 }
@@ -451,7 +453,7 @@ public class Snake
             if(R == 0 && G == 255 && B < 255 )
             {
                 step = 3;
-                System.out.println("s3");
+
                 B += 5;
                 return  new Color(R, G, B);
             }
@@ -459,7 +461,7 @@ public class Snake
             if(R == 0 && G <= 255 && G != 0 && B == 255)
             {
                 step = 4;
-                System.out.println("s4");
+
                 if(G > 0)
                 {
                     G -= 5;
@@ -470,7 +472,7 @@ public class Snake
             if(R >= 0 && R != 255 && G == 0 && B == 255)
             {
                 step = 5;
-                System.out.println("s5");
+
                 if(R <= 250)
                 R += 5;
                 return new Color(R,G,B);
@@ -479,7 +481,7 @@ public class Snake
             if(R == 255 && G == 0 && B <= 255)
             {
                 step = 6;
-                System.out.println("s6");
+
                 if(B > 0)
                 {
                     B -= 5;

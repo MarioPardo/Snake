@@ -45,10 +45,12 @@ public class Apple
 
         currentTime = (System.currentTimeMillis() - (GamePanel.gameStartTime + spawnTime)) / 1000;
 
+        if(!GamePanel.snake.dead)
+            score = 100 - (currentTime * 10); //makes it so that it takes 10s for the score to go down to 0
 
-        score = 100 - (currentTime * 10); //makes it so that it takes 10s for the score to go down to 0
         if(score <= 0 ) //makes sure score isnt negative
             score = 0;
+
 
 
 
